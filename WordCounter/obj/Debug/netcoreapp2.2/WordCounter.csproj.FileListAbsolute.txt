@@ -1,0 +1,9 @@
+/Users/Kapriss/Desktop/Epicodus/cSharp/WordCounterSolution/WordCounter/bin/Debug/netcoreapp2.2/WordCounter.deps.json
+/Users/Kapriss/Desktop/Epicodus/cSharp/WordCounterSolution/WordCounter/bin/Debug/netcoreapp2.2/WordCounter.dll
+/Users/Kapriss/Desktop/Epicodus/cSharp/WordCounterSolution/WordCounter/bin/Debug/netcoreapp2.2/WordCounter.pdb
+/Users/Kapriss/Desktop/Epicodus/cSharp/WordCounterSolution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.csprojAssemblyReference.cache
+/Users/Kapriss/Desktop/Epicodus/cSharp/WordCounterSolution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.csproj.CoreCompileInputs.cache
+/Users/Kapriss/Desktop/Epicodus/cSharp/WordCounterSolution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.AssemblyInfoInputs.cache
+/Users/Kapriss/Desktop/Epicodus/cSharp/WordCounterSolution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.AssemblyInfo.cs
+/Users/Kapriss/Desktop/Epicodus/cSharp/WordCounterSolution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.dll
+/Users/Kapriss/Desktop/Epicodus/cSharp/WordCounterSolution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.pdb
