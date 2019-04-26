@@ -5,23 +5,21 @@ namespace Word
 {
   public class Word
   {
-    public string WordInput;
-    public string SentenceInput;
+    private string WordInput;
 
   public Word (string word)
     {
-      this.WordInput = word;
-      // this.SentenceInput = sentence;
+      WordInput = word;
     }
 
-    public static bool CheckWord(string word)
+    public bool CheckWordIsString()
     {
-      foreach (char w in word)
+      foreach (char word in WordInput)
       {
-        if (!Char.IsLetter(w))
+        if (!Char.IsLetter(word))
           return false;
         }
-        return false;
+        return true;
       }
 
   }

@@ -8,17 +8,17 @@ namespace Word.Tests
   {
 
     [TestMethod]
-    public void CheckWord_UserInputsWord_ReturnTrue()
+    public void CheckWordIsString_UserInputsWord_ReturnTrue()
     {
       Word testWord = new Word("dog");
-      Assert.AreEqual(true, testWord.CheckWord());
+      Assert.AreEqual(true, testWord.CheckWordIsString());
     }
 
     [TestMethod]
-    public void CheckWord_UserInputsNonWord_ReturnFalse()
+    public void CheckWordIsString_UserInputsNonWord_ReturnFalse()
     {
       Word testWord = new Word("45");
-      Assert.AreEqual(false, testWord.CheckWord());
+      Assert.AreEqual(false, testWord.CheckWordIsString());
     }
   }
 }
