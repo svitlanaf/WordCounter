@@ -48,9 +48,15 @@ namespace WordCounter.Tests
     [TestMethod]
     public void CheckWordsAreMatching_UserInputsWordAndSentence_ReturnTrue()
     {
-      Words testWords = new Words("dog", "dog is barking");
-      testWords.WordsMatch();
+      string word = "sun";
+      Words testWords = new Words(word, "");
+      string sentence = "sun is shining";
+      Words testWords = new Words("", sentence);
+      word.SequenceEqual(sentence);
       
+      // Words testWords = new Words("sun", "sun is shining");
+      // testWords.WordsMatch("sun", "sun is shining");
+      // Assert.AreEqual(true, testWords.WordsMatch());
     }
   }
 }
