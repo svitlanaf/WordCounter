@@ -36,19 +36,14 @@ namespace WordCounter
 
       public bool WordsMatch(string WordInput, string wordInSentence)
       {
-        string [] splitWords = wordInSentence.Split(' ');
-
-        foreach (string word in splitWords)
-        {
         char[] charArray1 = WordInput.ToLower().ToCharArray();
         Array.Sort(charArray1);
 
         char[] charArray2 = wordInSentence.ToLower().ToCharArray();
         Array.Sort(charArray2);
-      }
 
         return charArray1.SequenceEqual(charArray2);
-        
+
       }
     }
 }

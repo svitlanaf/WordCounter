@@ -9,7 +9,7 @@ namespace WordCounter.Tests
     [TestMethod]
     public void WordConstructor_CreatesInstanceOfWord_Word()
     {
-      Words newWord = new Words("hello", "");
+      Words newWord = new Words("hello", "hello there");
       Assert.AreEqual(typeof(Words), newWord.GetType());
     }
 
@@ -46,17 +46,31 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void CheckWordsAreMatching_UserInputsWordAndSentence_ReturnTrue()
+    public void CheckWordsAreMatching_UserInputsWordAndSentenceOfOneWord_ReturnTrue()
     {
-      string word = "sun";
-      Words testWords = new Words(word, "");
-      string sentence = "sun is shining";
-      Words testWords = new Words("", sentence);
-      word.SequenceEqual(sentence);
-      
-      // Words testWords = new Words("sun", "sun is shining");
-      // testWords.WordsMatch("sun", "sun is shining");
-      // Assert.AreEqual(true, testWords.WordsMatch());
+      Words testWords = new Words("sun", "un");
+      Assert.AreEqual(true, testWords.WordsMatch("sun", "sun"));
+    }
+
+    [TestMethod]
+    public void CheckWordsAreNotMatching_UserInputsWordAndSentenceOfOneWord_ReturnTrue()
+    {
+      Words testWords = new Words("sun", "cat");
+      Assert.AreEqual(false, testWords.WordsMatch("sun", "cat"));
+    }
+
+    [TestMethod]
+    public void CheckWordsAreNotCaseSensitive1_UserInputsWordAndSentenceOfOneWord_ReturnTrue()
+    {
+      Words testWords = new Words("sun", "sUn");
+      Assert.AreEqual(true, testWords.WordsMatch("sun", "sUn"));
+    }
+
+    [TestMethod]
+    public void CheckWordsAreNotCaseSensitive2_UserInputsWordAndSentenceOfOneWord_ReturnTrue()
+    {
+      Words testWords = new Words("fan", "FAN");
+      Assert.AreEqual(true, testWords.WordsMatch("fan", "FAN"));
     }
   }
 }
