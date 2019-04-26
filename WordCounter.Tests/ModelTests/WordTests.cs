@@ -9,37 +9,48 @@ namespace WordCounter.Tests
     [TestMethod]
     public void WordConstructor_CreatesInstanceOfWord_Word()
     {
-      Word newWord = new Word("hello");
-      Assert.AreEqual(typeof(Word), newWord.GetType());
+      Words newWord = new Words("hello", "");
+      Assert.AreEqual(typeof(Words), newWord.GetType());
     }
 
     [TestMethod]
     public void GetWord_ReturnsWord_String()
     {
       string WordInput = "sun";
-      Word newWord = new Word (WordInput);
+      Words newWord = new Words (WordInput, "");
       string result = newWord.GetWord();
       Assert.AreEqual(WordInput, result);
     }
 
     [TestMethod]
+    public void GetSentence_ReturnsSentence_String()
+    {
+      string SentenceInput = "sun is shining";
+      Words newWord = new Words ("", SentenceInput);
+      string result = newWord.GetSentence();
+      Assert.AreEqual(SentenceInput, result);
+    }
+
+    [TestMethod]
     public void CheckWordIsString_UserInputsWord_ReturnTrue()
     {
-      Word testWord = new Word("dog");
+      Words testWord = new Words("dog", "");
       Assert.AreEqual(true, testWord.CheckWordIsString());
     }
 
     [TestMethod]
     public void CheckWordIsString_UserInputsNonWord_ReturnFalse()
     {
-      Word testWord = new Word("45");
+      Words testWord = new Words("45", "");
       Assert.AreEqual(false, testWord.CheckWordIsString());
     }
 
-    // [TestMethod]
-    // public void CheckWordsAreMatching_UserInputsWordAndSentence_ReturnTrue()
-    // {
-    //
-    // }
+    [TestMethod]
+    public void CheckWordsAreMatching_UserInputsWordAndSentence_ReturnTrue()
+    {
+      Words testWords = new Words("dog", "dog is barking");
+      testWords.WordsMatch();
+      
+    }
   }
 }

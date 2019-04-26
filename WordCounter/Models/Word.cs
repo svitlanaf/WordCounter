@@ -3,14 +3,15 @@ using System.Linq;
 
 namespace WordCounter
 {
-  public class Word
+  public class Words
   {
     private string WordInput;
     private string SentenceInput;
 
-  public Word (string word)
+  public Words (string word, string sentence)
     {
       WordInput = word;
+      SentenceInput = sentence;
     }
 
     public string GetWord()
@@ -18,25 +19,30 @@ namespace WordCounter
       return WordInput;
     }
 
+    public string GetSentence()
+    {
+      return SentenceInput;
+    }
+
     public bool CheckWordIsString()
     {
-      foreach (char userWord in WordInput)
+      foreach (char character in WordInput)
       {
-        if (!Char.IsLetter(userWord))
+        if (!Char.IsLetter(character))
           return false;
         }
         return true;
       }
 
-      // public static bool MatchingWords(string word1, string word2)
-      // {
-      //   char[] charArray1 = word1.ToLower().ToCharArray();
-      //   Array.Sort(charArray1);
-      //
-      //   char[] charArray2 = word2.ToLower().ToCharArray();
-      //   Array.Sort(charArray2);
-      //
-      //   return charArray1.SequenceEqual(charArray2);
-      // }
-  }
+      static bool WordsMatch(string WordInput, string wordInSentence)
+      {
+        char[] charArray1 = WordInput.ToLower().ToCharArray();
+        Array.Sort(charArray1);
+
+        char[] charArray2 = wordInSentence.ToLower().ToCharArray();
+        Array.Sort(charArray2);
+
+        return charArray1.SequenceEqual(charArray2);
+      }
+    }
 }
