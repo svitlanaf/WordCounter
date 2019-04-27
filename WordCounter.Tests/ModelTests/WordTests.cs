@@ -91,7 +91,7 @@ namespace WordCounter.Tests
     public void CheckSentenceAndWordAreNone_UserInputSentenceIsNoneAndUserInputWordIsNone_ReturnFalse()
     {
       Words testWords = new Words(" ", " ");
-      Assert.AreEqual(true, testWords.WordMatchInSentence(" ", " "));
+      Assert.AreEqual(false, testWords.WordMatchInSentence(" ", " "));
     }
 
     [TestMethod]

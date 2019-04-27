@@ -8,10 +8,10 @@ namespace WordCounter
     private string WordInput;
     private string SentenceInput;
 
-    public Words (string word, string sentence)
+    public Words (string wordInput, string sentenceInput)
     {
-      WordInput = word;
-      SentenceInput = sentence;
+      WordInput = wordInput;
+      SentenceInput = sentenceInput;
     }
 
     public string GetWord()
@@ -38,12 +38,12 @@ namespace WordCounter
 
      public bool WordMatchInSentence(string WordInput, string SentenceInput)
       {
-        string word = WordInput.ToLower();
-        string sentence = SentenceInput.ToLower();
-        string [] splitWords = sentence.Split(' ');
-        foreach (string w in splitWords)
+        string userWord = WordInput.ToLower();
+        string userSentence = SentenceInput.ToLower();
+        string [] splitWords = userSentence.Split(' ');
+        foreach (string eachWord in splitWords)
       {
-        if (w == sentence)
+        if (userWord == eachWord)
         {
           return true;
         }
@@ -51,6 +51,7 @@ namespace WordCounter
           return false;
         }
 
+        
 
     }
 }
