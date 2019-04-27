@@ -8,7 +8,7 @@ namespace WordCounter
     private string WordInput;
     private string SentenceInput;
 
-  public Words (string word, string sentence)
+    public Words (string word, string sentence)
     {
       WordInput = word;
       SentenceInput = sentence;
@@ -29,21 +29,28 @@ namespace WordCounter
       foreach (char character in WordInput)
       {
         if (!Char.IsLetter(character))
+        {
           return false;
         }
-        return true;
       }
+      return true;
+    }
 
-      public bool WordsMatch(string WordInput, string wordInSentence)
+     public bool WordMatchInSentence(string WordInput, string SentenceInput)
       {
-        char[] charArray1 = WordInput.ToLower().ToCharArray();
-        Array.Sort(charArray1);
+        string word = WordInput.ToLower();
+        string sentence = SentenceInput.ToLower();
+        string [] splitWords = sentence.Split(' ');
+        foreach (string w in splitWords)
+      {
+        if (w == sentence)
+        {
+          return true;
+        }
+       }
+          return false;
+        }
 
-        char[] charArray2 = wordInSentence.ToLower().ToCharArray();
-        Array.Sort(charArray2);
 
-        return charArray1.SequenceEqual(charArray2);
-
-      }
     }
 }
