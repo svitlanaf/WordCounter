@@ -27,6 +27,10 @@ namespace WordCounter
 
     public bool CheckWordIsString()
     {
+      if (WordInput == "")
+      {
+        return false;
+      }
       foreach (char character in WordInput)
       {
         if (!Char.IsLetter(character))
@@ -37,20 +41,25 @@ namespace WordCounter
       return true;
     }
 
-     public int CountWordMatchInSentence()
+    public int CountWordMatchInSentence()
+    {
+      int count = 0;
+      if (CheckWordIsString() == false)
       {
-        int count = 0;
-        string userWord = WordInput.ToLower();
-        string userSentence = SentenceInput.ToLower();
-        string [] splitWords = userSentence.Split(' ');
-        foreach (string eachWord in splitWords)
+        return 0;
+      }
+      string userWord = WordInput.ToLower();
+      string userSentence = SentenceInput.ToLower();
+
+      string [] splitWords = userSentence.Split(' ');
+      foreach (string eachWord in splitWords)
       {
         if (userWord == eachWord)
         {
           count ++;
         }
-       }
-          return count;
-        }
+      }
+      return count;
     }
+  }
 }

@@ -41,7 +41,7 @@ namespace WordCounter.Tests
     [TestMethod]
     public void CheckWordIsString_UserInputsNonWord_ReturnFalse()
     {
-      Words testWord = new Words("45", "");
+      Words testWord = new Words("", "");
       Assert.AreEqual(false, testWord.CheckWordIsString());
     }
 
