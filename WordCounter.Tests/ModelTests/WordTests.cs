@@ -46,70 +46,70 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void CheckWordsAreMatching_UserInputsWordAndSentenceOfOneWord_ReturnTrue()
+    public void CheckWordsAreMatching_UserInputsWordAndSentenceOfOneWord_ReturnCount1()
     {
       Words testWords = new Words("sun", "sun");
       Assert.AreEqual(1, testWords.CountWordMatchInSentence());
     }
 
     [TestMethod]
-    public void CheckWordsAreNotMatching_UserInputsWordAndSentenceOfOneWord_ReturnTrue()
+    public void CheckWordsAreNotMatching_UserInputsWordAndSentenceOfOneWord_ReturnCount0()
     {
       Words testWords = new Words("sun", "cat");
       Assert.AreEqual(0, testWords.CountWordMatchInSentence());
     }
 
     [TestMethod]
-    public void CheckWordsAreNotCaseSensitive1_UserInputsWordAndSentenceOfOneWord_ReturnTrue()
+    public void CheckWordsAreNotCaseSensitive1_UserInputsWordAndSentenceOfOneWord_ReturnCount1()
     {
       Words testWords = new Words("sun", "sUn");
       Assert.AreEqual(1, testWords.CountWordMatchInSentence());
     }
 
     [TestMethod]
-    public void CheckWordsAreNotCaseSensitive2_UserInputsWordAndSentenceOfOneWord_ReturnTrue()
+    public void CheckWordsAreNotCaseSensitive2_UserInputsWordAndSentenceOfOneWord_ReturnCount1()
     {
       Words testWords = new Words("fan", "FAN");
       Assert.AreEqual(1, testWords.CountWordMatchInSentence());
     }
 
     [TestMethod]
-    public void CheckWordIsNone_UserInputWordIsNone_ReturnFalse()
+    public void CheckWordIsNone_UserInputWordIsNone_ReturnCount0()
     {
-      Words testWords = new Words(" ", "dog");
+      Words testWords = new Words("", "dog");
       Assert.AreEqual(0, testWords.CountWordMatchInSentence());
     }
 
     [TestMethod]
-    public void CheckSentenceIsNone_UserInputSentenceIsNone_ReturnFalse()
+    public void CheckSentenceIsNone_UserInputSentenceIsNone_ReturnCount0()
     {
-      Words testWords = new Words("cat", " ");
+      Words testWords = new Words("cat", "");
       Assert.AreEqual(0, testWords.CountWordMatchInSentence());
     }
 
     [TestMethod]
-    public void CheckSentenceAndWordAreNone_UserInputSentenceIsNoneAndUserInputWordIsNone_ReturnFalse()
+    public void CheckSentenceAndWordAreNone_UserInputSentenceIsNoneAndUserInputWordIsNone_ReturnCount0()
     {
-      Words testWords = new Words(" ", " ");
+      Words testWords = new Words("", "");
       Assert.AreEqual(0, testWords.CountWordMatchInSentence());
     }
 
     [TestMethod]
-    public void CheckWordsAreMatching_UserInputsWordAndSentence_ReturnTrue()
+    public void CheckWordsAreMatching_UserInputsWordAndSentence_ReturnCount1()
     {
       Words testWords = new Words("sun", "sun fun run");
       Assert.AreEqual(1, testWords. CountWordMatchInSentence());
     }
 
     [TestMethod]
-    public void CheckWordsAreNotMatching_UserInputsWordAndSentence_ReturnFalse()
+    public void CheckWordsAreNotMatching_UserInputsWordAndSentence_ReturnCount0()
     {
       Words testWords = new Words("sun", "gun fun run");
       Assert.AreEqual(0, testWords.CountWordMatchInSentence());
     }
 
     [TestMethod]
-    public void CheckWordsInSentenceAreNotCaseSensitive_UserInputsWordAndSentence_ReturnTrue()
+    public void CheckWordsInSentenceAreNotCaseSensitive_UserInputsWordAndSentence_ReturnCount3()
     {
       Words testWords = new Words("fan", "FAN Fan faN man");
       Assert.AreEqual(3, testWords.CountWordMatchInSentence());

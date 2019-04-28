@@ -12,8 +12,8 @@ _ _
 ## Setup/Installation Requirements
 
 * _To use this application you need to have .NET (ver. 2.2) Framework and Mono tool installed on your computer._
-* _Clone the repository._
-* _Open Terminal (for Mac users) or PowerShell (for Windows users) and run the following command: mono Program.exe._
+* _Clone the repository on your desktop._
+* _Open Terminal (for Mac users) or PowerShell (for Windows users), navigate to WordCounter folder(cd .../Desktop/WordCounterSolution/WordCounter) and run the following command: mcs Program.cs Models/Word.cs && mono Program.exe._
 
 
 ## Known Bugs
