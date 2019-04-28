@@ -15,7 +15,7 @@ namespace WordCounter
         string userSentence = Console.ReadLine();
 
         Words testWords = new Words(userWord, userSentence);
-        Console.WriteLine("Word " + userWord + " appears " + testWords.CountWordMatchInSentence() + "  times in your sentence.");
+        Console.WriteLine("Your word '" + userWord + "' appears " + testWords.CountWordMatchInSentence() + "  times in the sentence.");
         }
       }
   }

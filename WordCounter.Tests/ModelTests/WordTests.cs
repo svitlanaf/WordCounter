@@ -115,5 +115,12 @@ namespace WordCounter.Tests
       Assert.AreEqual(3, testWords.CountWordMatchInSentence());
     }
 
+    [TestMethod]
+    public void CheckFullWordsAreMatching_UserInputsWordAndSentenceThatHaveWordsStartsWithSameLettersAsWord_ReturnCount1()
+    {
+      Words testWords = new Words("cat", "Cat has a hat at the cathedral");
+      Assert.AreEqual(1, testWords.CountWordMatchInSentence());
+    }
+
     }
   }
