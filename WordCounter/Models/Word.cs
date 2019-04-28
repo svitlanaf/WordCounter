@@ -36,8 +36,9 @@ namespace WordCounter
       return true;
     }
 
-     public bool WordMatchInSentence(string WordInput, string SentenceInput)
+     public int CountWordMatchInSentence()
       {
+        int count = 0;
         string userWord = WordInput.ToLower();
         string userSentence = SentenceInput.ToLower();
         string [] splitWords = userSentence.Split(' ');
@@ -45,13 +46,10 @@ namespace WordCounter
       {
         if (userWord == eachWord)
         {
-          return true;
+          count ++;
         }
        }
-          return false;
+          return count;
         }
-
-        
-
     }
 }
